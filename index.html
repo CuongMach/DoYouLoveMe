@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe?</title>
+</head>
+<body>
+<h1 style="position:absolute; left:220px; top:175px;" id="c2">Do you love me?</h1>
+<input type="button" value=" YES " id="c1" onclick="yesClick()" style="position:absolute; left:285px; top:235px;"/>
+<input type="button" id="btnNo" value="  NO  " onmouseover="noHover()" style="position:absolute; left:360px; top:235px;"/>
+<img id="anh">
+</head>
+</body>
+
+</html>
+<script type="text/javascript">
+  function yesClick() {
+      document.getElementById("anh").src = "https://benative.vn/uploads/tin-tuc/2018_05/tu-hoc-tieng-anh-giao-tiep.png";
+      document.getElementById("c1").setAttribute("style", "display: none");
+      document.getElementById("c2").setAttribute("style", "display: none");
+      document.getElementById("btnNo").setAttribute("style", "display: none");
+
+  }
+  function noHover()
+  {
+    var x = Math.round(Math.random() * window.innerWidth);
+    var y = Math.round(Math.random() * window.innerHeight);
+    document.getElementById('btnNo').style.left = x + 'px';
+    document.getElementById('btnNo').style.top = y + 'px';
+  }
+</script>
